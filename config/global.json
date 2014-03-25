@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "OG Localization Demo": {
+            "applicationId": "QOjaDpsK6A3h836PwdFgrtvoHlH582LsPBLT2JXG", 
+            "masterKey": "mlwQr684qq0WAOVrs8Gw2OqlV77xBzKt5ypkekh2"
+        }, 
+        "_default": {
+            "link": "OG Localization Demo"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}

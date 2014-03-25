@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta property="og:type" content="og:achievement" />
+    <meta property="og:title" content="<%= achievement.get('title') %>" />
+    <meta property="og:description" content="<%= achievement.get('description') %>" />
+    <meta property="og:image" content="<%= achievement.get('image_file').url() %>" />
+    <meta property="og:url" content="<%= url_prefix + achievement.id %>" />
+    <meta property="game:points" content="<%= achievement.get('points') %>" />
+    <meta property="fb:app_id" content="<%= app_id %>" />
+    <title><%= achievement.get('title') %></title>
+  </head>
+  <body>
+    <h1><%= achievement.get('title') %></h1>
+    <p><img src="<%= product.get('image_file').url() %>" /></p>
+    <p><%= achievement.get('description') %></p>
+    <p><em><a href='/achievements'>Back to achievements</a></em></p>
+  </body>
+</html>

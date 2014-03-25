@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+  </head>
+  <body>
+    <ul>
+      <% products.forEach(function(product){ %>
+      <li><a href="/products/<%= product.id %>"><%= product.get('title') %></a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

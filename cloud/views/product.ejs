@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta property="og:type" content="og:product" />
+    <meta property="og:locale" content="<%= product.get('locale') %>" />
+    <% if( localizations ) prices.forEach(function(localization){ %>
+    <meta property="og:locale:alternate" content="<%= localization.get('locale') %>"/>
+    <% }) %>
+    <meta property="og:title" content="<%= product.get('title') %>" />
+    <meta property="og:plural_title" content="<%= product.get('plural_title') %>" />
+    <meta property="og:image" content="<%= product.get('image_file').url() %>" />
+    <meta property="og:url" content="<%= url_prefix +  product.id %>" />
+    <meta property="og:description" content="<%= product.get('description') %>" />
+    <% if( prices ) prices.forEach(function(price){ %>
+    <meta property="product:price:amount" content="<%= price.get('amount') %>"/>
+    <meta property="product:price:currency" content="<%= price.get('currency') %>"/>
+    <% }) %>
+    <title><%= product.get('title') %></title>
+  </head>
+  <body>
+    <h1><%= product.get('title') %></h1>
+    <p><img src="<%= product.get('image_file').url() %>" /></p>
+    <p><%= product.get('description') %></p>
+    <p><em><a href='/products'>Back to products</a></em></p>
+  </body>
+</html>

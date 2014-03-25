@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Achievements</title>
+  </head>
+  <body>
+    <ul>
+      <% achievements.forEach(function(achievements){ %>
+      <li><a href="/achievements/<%= achievements.id %>"><%= achievements.get('title') %></a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
